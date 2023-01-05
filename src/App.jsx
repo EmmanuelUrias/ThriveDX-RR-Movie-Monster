@@ -15,6 +15,8 @@ function App() {
     console.log(newIdeas)
   }
 
+  // Notes on data flow:
+  // Our app utilizes state twice. There is state on the parent to handle the inverse dataflow and state on the child to handle the input. The local state calls the function (props.addIdeas(input)) passed as a prop from the parent compontent which changes the parent's state. Because of this, the sibling compontent (DisplayIdeas) is able to access the new data from the App parent.
 
 
   return (
